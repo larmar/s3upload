@@ -10,13 +10,13 @@ pip install argparse
 
 ## What it does:
 
-* uploads files from a folder into the bucket
+* uploads files from a folder into a S3 AWS bucket
 * mirrors the entire folder structure in the bucket along with the files uploaded
-* when a file is larger than bytes_per_chunk, splits the files into chunks and uploads simultaneously these chunks,
-the number if threads is determined by max_threads
-* when a file is uploaded, it is deleted unless delete_file is set to false
+* when a file is larger than __bytes_per_chunk__, splits the files into chunks and uploads simultaneously these chunks,
+the number of threads spawn is determined by __max_threads__
+* when a file is uploaded, it is deleted unless __delete_file__ is set to false
 * once a file is uploaded, the script checks md5 sumcheck
-* if upload fails, the script retries to upload the file, determined by num_retries
+* if upload fails, the script retries to upload, determined by __num_retries__
 
 ## How it works:
 
