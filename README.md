@@ -5,7 +5,7 @@
 pip install boto3
 pip install argparse
 ```
-* Rename s3upload.conf.template to s3upload.conf  
+* Rename s3upload.conf.template to s3upload.conf
 
 
 ## What it does:
