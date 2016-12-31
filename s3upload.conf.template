@@ -1,0 +1,13 @@
+# Credentials and information on Amazon s3
+access_key=ACCESS_KEY
+secret_key=SECRET_KEY
+# Split size for upload (Note: MIN. 5MB for amazon chunk uploads )
+bytes_per_chunk=5242880
+# Max Upload threads
+max_threads=2
+# Number of times to retry failed upload
+num_retries=5
+# Log-level WARN, INFO, DEBUG (Note: -v or --verbose arg passed in overrides this config setting)
+log_level=INFO
+# Delete files uploaded
+delete_file=true
