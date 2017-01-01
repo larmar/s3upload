@@ -14,10 +14,6 @@
 # limitations under the License.
 
 
-
-
-
-
 import logging
 import boto3
 import os
