@@ -1,10 +1,25 @@
 ## Installation:
 
 * Install Amazon Web Services (AWS) SDK for Python and ArgumentParser
+
+__with pip__
 ```
 pip install boto3
 pip install argparse
 ```
+
+__Centos, RedHat__
+```
+yum install python-argparse
+```
+
+__Debian, Ubuntu__
+```
+sudo apt-get update
+sudo apt-get install python-argparse
+sudo apt-get install python-boto3
+```
+
 * Rename s3upload.conf.template to s3upload.conf
 
 
