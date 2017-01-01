@@ -17,10 +17,16 @@ __Debian, Ubuntu__
 ```
 sudo apt-get update
 sudo apt-get install python-argparse
-sudo apt-get install python-boto3
+sudo apt-get install python-boto3   Note: If it results in: Unable to locate package python-boto3, use pip install boto3
 ```
 
 * Rename s3upload.conf.template to s3upload.conf
+* Test installation from the terminal:
+```
+python
+>>> import boto3
+>>> import argparse
+```
 
 
 ## What it does:
