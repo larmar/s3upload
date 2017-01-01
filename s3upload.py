@@ -234,6 +234,8 @@ def main(conf, source_path, bucket_name):
     delete_file = True if conf['delete_file'].lower() == 'true' else False
 
     # folder to upload from
+    if source_path.endswith('/'):
+        source_path = source_path[:-1]
     dest_folder_s3 = os.path.basename(source_path)
     logger.info('Source: {}, Destination --> bucket: {}, folder: {}'.format(source_path, bucket_name, dest_folder_s3))
 
