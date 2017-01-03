@@ -39,7 +39,7 @@ logger = logging.getLogger(os.path.basename(__file__))
 def upload(client_s3, path_s3, _path, bucket):
 
     try:
-        client_s3.upload_file(_path, bucket, path_s3)
+        client_s3.put_object(Body=open(_path), Bucket=bucket, Key=path_s3)
         logger.info('File: {} uploaded'.format(path_s3))
         return True
     except:
