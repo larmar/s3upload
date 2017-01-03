@@ -1,6 +1,7 @@
 # Credentials and information on Amazon s3
 access_key=ACCESS_KEY
 secret_key=SECRET_KEY
+region_namei=eu-west-1
 # Split size for upload (Note: MIN. 5MB for amazon chunk uploads )
 bytes_per_chunk=5242880
 # Max Upload threads

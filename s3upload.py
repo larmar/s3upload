@@ -225,8 +225,9 @@ def get_conf(conf_file):
 
 
 def main(conf, source_path, bucket_name):
-    client = boto3.client('s3', aws_access_key_id=conf.get('access_key'),
-                                       aws_secret_access_key=conf.get('secret_key'))
+    client = boto3.client('s3', region_name=conf.get('region_name'),
+                           aws_access_key_id=conf.get('access_key'),
+                           aws_secret_access_key=conf.get('secret_key'))
 
     num_retries = int(conf['num_retries'])
     max_threads = int(conf['max_threads'])
