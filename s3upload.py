@@ -225,7 +225,11 @@ def get_conf(conf_file):
 
 
 def main(conf, source_path, bucket_name):
-    client = boto3.client('s3', region_name=conf.get('region_name'),
+
+    if conf.get('access_key') == 'ACCESS_KEY' or conf.get('access_key') == '':
+        client = boto3.client('s3', region_name=conf.get('region_name'))
+    else:
+        client = boto3.client('s3', region_name=conf.get('region_name'),
                            aws_access_key_id=conf.get('access_key'),
                            aws_secret_access_key=conf.get('secret_key'))
 
